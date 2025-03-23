@@ -307,14 +307,7 @@ ggdid_plotter = function(es, title = "", lim_l = NULL, lim_u = NULL) {
 ##################################################################a##############
 ########## Get Main Results ##########
 
-########## Full Sample ##########
-
-##### Number of Startups #####
-
-## Number of Startups Per Capita ##
-
 # Overall Effects
-
 df_overall = df
 attgt_overall = get_attgt("Y_log_sfr", dr_att_dml, data = df_overall)
 event_overall = get_atte(attgt_overall, "dynamic",pre = -15, post = 14, cluster = "Cluster_county")
