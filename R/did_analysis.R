@@ -1,7 +1,5 @@
 # Spencer Sween's CDFI DiD Analysis
 
-# Spencer Sween's CDFI Entrepreneurship Analysis V2
-
 # Clear Enviornment
 rm(list = ls())
 
@@ -23,8 +21,8 @@ library(fastglm)
 set.seed(42)
 
 # Migrate to Main Project Directory
-setwd("/Users/spencersween/Downloads/Advancement Project - Loan Guarantees/")
-setwd("CDFI Stuff")
+setwd("~/Dropbox/CDFI Project/")
+setwd("Data/Final_Data/Test/")
 
 ################################################################################
 ########## Import Data ##########
@@ -38,7 +36,7 @@ df = data.table::fread(filename) %>%
 
 cluster = "Cluster_county"
 text_X = df %>%
-  select(cluster,
+  select(all_of(cluster),
          X_total_pop,
          X_prop_hispanic,
          X_prop_black,
