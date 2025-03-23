@@ -1,5 +1,7 @@
+# Spencer Sween's CDFI DiD Analysis
+
 # Spencer Sween's CDFI Entrepreneurship Analysis V2
- 
+
 # Clear Enviornment
 rm(list = ls())
 
@@ -16,7 +18,7 @@ library(did)
 library(DescTools)
 library(fixest)
 library(fastglm)
- 
+
 # Set Seed
 set.seed(42)
 
@@ -337,5 +339,4 @@ event_low = get_atte(attgt_low, "dynamic", pre = -15, post = 14, cluster = "Clus
 plot_low = ggdid_plotter(event_low, lim_l = -0.15, lim_u = 0.50)
 event_low
 plot_low
-
 
